@@ -1,130 +1,124 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">  
-    <title>Hoja de Vida</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hola de vida de Duvan Guevara">
-    <meta name="author" content="Jhonnier Duvan Guevara Rebolledo">
-    <meta name="robots" content="index, follow">
+<meta charset="UTF-8">  
+<title>Hoja de Vida</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+<style>
+* { box-sizing: border-box; }
 
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background-color: #e5e7eb;
-            margin: 0;
-            padding: 40px;
-        }
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #e5e7eb, #d1d5db);
+    margin: 0;
+    padding: 40px;
+}
 
-        .container {
-            max-width: 900px;
-            margin: auto;
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 14px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-        }
+.container {
+    max-width: 1000px;
+    margin: auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 14px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
 
-        /* ===== ENCABEZADO ===== */
-        .header {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-            padding-bottom: 30px;
-            border-bottom: 3px solid #eb2525;
-        }
+/* ===== ENCABEZADO ===== */
+.header {
+    display: flex;
+    gap: 30px;
+    padding-bottom: 25px;
+    border-bottom: 3px solid #08a9ed;
+}
 
-        .photo {
-            width: 160px;
-            height: 190px;
-            flex-shrink: 0;
-        }
+.photo {
+    width: 160px;
+    height: 190px;
+}
 
-        .photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 12px;
-            border: 4px solid #eb2525;
-        }
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 4px solid #08a9ed;
+}
 
-        .info h1 {
-            margin: 0;
-            font-size: 32px;
-            color: #111827;
-        }
+.info h1 { margin: 0; font-size: 30px; }
 
-        .info .titulo {
-            color: #eb2525;
-            font-weight: 600;
-            margin: 8px 0 15px;
-        }
+.info .titulo {
+    color: #08a9ed;
+    font-weight: bold;
+    margin: 5px 0;
+}
 
-        .info p {
-            margin: 0;
-            color: #374151;
-            line-height: 1.6;
-        }
+.contacto {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #374151;
+}
 
-        /* ===== SECCIONES ===== */
-        .section {
-            margin-top: 35px;
-        }
+/* ===== SECCIONES ===== */
+.section { margin-top: 30px; }
 
-        .section h2 {
-            font-size: 20px;
-            color: #111827;
-            border-left: 5px solid #eb2525;
-            padding-left: 12px;
-            margin-bottom: 18px;
-        }
+.section h2 {
+    font-size: 18px;
+    border-left: 5px solid #08a9ed;
+    padding-left: 10px;
+}
 
-        .section ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+.card {
+    background: #f9fafb;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
 
-        .section ul li {
-            margin-bottom: 14px;
-            color: #374151;
-            line-height: 1.5;
-        }
+/* ===== HABILIDADES ===== */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
 
-        /* ===== BLOQUES DESTACADOS ===== */
-        .card {
-            background: #f9fafb;
-            padding: 18px 20px;
-            border-radius: 10px;
-            border-left: 4px solid #eb2525;
-        }
+.skills span {
+    background: #08a9ed;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+}
 
-        /* ===== HABILIDADES ===== */
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
+/* ===== INPUTS ===== */
+input {
+    margin-top: 10px;
+    padding: 6px;
+    width: 60%;
+}
 
-        .skills span {
-            background: #eb2525;
-            color: white;
-            padding: 8px 14px;
-            border-radius: 20px;
-            font-size: 13px;
-        }
+button {
+    padding: 6px 10px;
+    background: #08a9ed;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 12px;
+}
 
-        /* ===== DOBLE COLUMNA ===== */
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-        }
-    </style>
+.delete {
+    background: #ef4444;
+}
+
+/* ===== GRID ===== */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+</style>
 </head>
 
 <body>
@@ -138,81 +132,166 @@
         </div>
 
         <div class="info">
-            <h1>Jhonnier Duvan Guevara Rebolledo</h1>
-            <div class="titulo">Tecnólogo en Desarrollo de Sistemas de Información y Software</div>
+            <h1>Duvan Guevara</h1>
+            <div class="titulo">Analista de Tecnología</div>
             <p>
-                Tecnólogo con experiencia en soporte técnico, administración de sistemas
-                y desarrollo web. Comprometido, responsable y orientado a resultados,
-                con facilidad para el trabajo en equipo.
+                Profesional con experiencia en soporte técnico, atención a usuarios 
+                y administración de sistemas. Destacado por responsabilidad,
+                aprendizaje rápido y trabajo en equipo.
             </p>
+
+            <div class="contacto">
+                📧 duvan@email.com <br>
+                📱 +57 3000000000 <br>
+                📍 Colombia
+            </div>
         </div>
     </div>
 
-    <!-- FORMACIÓN -->
-    <div class="section">
-        <h2>Formación Académica</h2>
-        <div class="card">
-            <ul>
-                <li>
-                    <strong>Tecnología en Desarrollo de Sistemas de Información y Software</strong><br>
-                    Universidad Santiago de Cali
-                </li>
-                <li>
-                    <strong>Bachiller Académico</strong><br>
-                    Institución Educativa Francisco Jose de Caldas 
-                </li>
-            </ul>
-        </div>
-    </div>
 
-    <!-- EXPERIENCIA -->
-    <div class="section">
-        <h2>Experiencia Laboral</h2>
-        <div class="card">
-            <ul>
-                <li>
-                    <strong>Analista de Tecnología</strong> – BluelinkBPO<br>
-                    Soporte técnico, mantenimiento de equipos, gestión de incidencias
-                    y administración de sistemas.
-                </li>
-                <li>
-                    <strong>Soporte Técnico</strong> – [Nombre de la empresa]<br>
-                    Atención a usuarios, resolución de fallas, instalación de software
-                    y hardware.
-                </li>
-            </ul>
-        </div>
-    </div>
+    <div class="grid">
 
-    <!-- HABILIDADES E IDIOMAS -->
-    <div class="section grid">
+        <!-- EXPERIENCIA -->
+        <div class="section">
+            <h2>Experiencia Laboral</h2>
+            <div class="card">
+                <ul id="exp-lista">
+                    <li>
+                        Analista de Tecnología – BluelinkBPO
+                        <button class="delete">Delete</button>
+                    </li>
+                </ul>
 
-        <div>
-            <h2>Habilidades</h2>
-            <div class="skills">
-                <span>Soporte técnico</span>
-                <span>Mesa de ayuda</span>
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>Administración de sistemas</span>
-                <span>Trabajo en equipo</span>
+                <input type="text" id="exp-input" placeholder="Nueva experiencia">
+                <button id="exp-btn">Agregar</button>
             </div>
         </div>
 
-        <div>
+        <!-- EDUCACIÓN -->
+        <div class="section">
+            <h2>Educación</h2>
+            <div class="card">
+                <p><strong>Tecnología en Desarrollo de Software</strong></p>
+                <p>Universidad Santiago de Cali</p>
+            </div>
+        </div>
+
+        <!-- HABILIDADES -->
+        <div class="section">
+            <h2>Habilidades</h2>
+
+            <div class="skills" id="skills-lista">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Soporte Técnico</span>
+            </div>
+
+            <input type="text" id="skill-input" placeholder="Nueva habilidad">
+            <button id="skill-btn">Agregar</button>
+        </div>
+
+        <!-- IDIOMAS -->
+        <div class="section">
             <h2>Idiomas</h2>
             <div class="card">
-                <ul>
-                    <li>Español — Nativo</li>
-                    <li>Inglés — Básico / Intermedio</li>
-                </ul>
+                Español — Nativo <br>
+                Inglés — Básico / Intermedio
+            </div>
+        </div>
+
+        <!-- PROYECTOS -->
+        <div class="section">
+            <h2>Proyectos</h2>
+            <div class="card">
+                Desarrollo de aplicaciones web, sistemas de inventario
+                y plataformas académicas.
             </div>
         </div>
 
     </div>
 
 </div>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  /* ===== AGREGAR HABILIDAD ===== */
+  const skillInput = document.getElementById("skill-input");
+  const skillBtn = document.getElementById("skill-btn");
+  const skillsLista = document.getElementById("skills-lista");
+
+  skillBtn.addEventListener("click", () => {
+      const valor = skillInput.value.trim();
+      if (valor === "") return;
+
+      const contenedor = document.createElement("span");
+      contenedor.textContent = valor + " ";
+
+      const borrar = document.createElement("button");
+      borrar.textContent = "X";
+      borrar.classList.add("delete");
+
+      borrar.addEventListener("click", () => {
+          contenedor.remove();
+      });
+
+      contenedor.appendChild(borrar);
+      skillsLista.appendChild(contenedor);
+
+      skillInput.value = "";
+      skillInput.focus();
+  });
+
+  /* ===== DELETE A LAS EXISTENTES ===== */
+  document.querySelectorAll("#skills-lista span").forEach(skill => {
+      const borrar = document.createElement("button");
+      borrar.textContent = "X";
+      borrar.classList.add("delete");
+
+      borrar.addEventListener("click", () => {
+          skill.remove();
+      });
+
+      skill.appendChild(borrar);
+  });
+
+  /* ===== AGREGAR EXPERIENCIA ===== */
+  const expInput = document.getElementById("exp-input");
+  const expBtn = document.getElementById("exp-btn");
+  const expLista = document.getElementById("exp-lista");
+
+  expBtn.addEventListener("click", () => {
+      const valor = expInput.value.trim();
+      if (valor === "") return;
+
+      const nuevoLi = document.createElement("li");
+      nuevoLi.textContent = valor + " ";
+
+      const borrar = document.createElement("button");
+      borrar.textContent = "Delete";
+      borrar.classList.add("delete");
+
+      borrar.addEventListener("click", () => {
+          nuevoLi.remove();
+      });
+
+      nuevoLi.appendChild(borrar);
+      expLista.appendChild(nuevoLi);
+
+      expInput.value = "";
+      expInput.focus();
+  });
+
+  /* ===== DELETE EXISTENTES ===== */
+  document.querySelectorAll(".delete").forEach(btn => {
+      btn.addEventListener("click", (e) => {
+          e.target.parentElement.remove();
+      });
+  });
+
+});
+</script>
 
 </body>
 </html>
